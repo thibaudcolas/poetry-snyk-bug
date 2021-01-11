@@ -29,12 +29,12 @@ snyk test
 
 ## Workaround
 
-For now, as a workaround I managed to make Snyk work by manually editing the `poetry.lock`:
+For now, as a workaround I managed to make Snyk work by manually editing the `poetry.lock` to add enough metadata about setuptools (note I didn’t check the correctness of any of this):
 
 ```diff
 +[[package]]
 +category = "main"
-+description = "MANUALLY EDITED"
++description = "MANUALLY EDITED, INVALID METADATA"
 +name = "setuptools"
 +optional = false
 +python-versions = ">=3.6"
